@@ -15,5 +15,5 @@
 
 ## Ссылки
 
-<li>[Miro]:(https://miro.com/app/board/o9J_kuk0apk=/)
-<li>[Trello]:(https://trello.com/b/efuikadp/тп-easywow)
+<li>[Miro]:https://miro.com/app/board/o9J_kuk0apk=/
+<li>[Trello]:https://trello.com/b/efuikadp/тп-easywow
