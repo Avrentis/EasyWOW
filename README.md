@@ -9,6 +9,9 @@
   
 ## Навигация по документации
 
+<li> [Тех.Задание](Документация/TZ_EasyWOW.docx)
+<li> [Курсовой Проект](
+
 ## Ссылки
 
 <li>[Miro](https://miro.com/app/board/o9J_kuk0apk=/)
