@@ -1,0 +1,37 @@
+{
+	"httpServer" :
+	{
+		"port"    : 8999,
+		"session" :
+		{
+			"secret"            : "Skyrim_is_perfect",
+			"key"               : "sid",
+			"resave"            : false,
+			"saveUninitialized" : true
+		}
+	},
+	"httpsServer" :
+	{
+		"port"    : 9000,
+		"session" :
+		{
+			"secret"            : "Skyrim_is_perfect",
+			"key"               : "sid",
+			"resave"            : false,
+			"saveUninitialized" : true
+		},
+		"keyFile"               : "./encryption/key.pem",
+		"certFile"              : "./encryption/cert.pem"
+	},
+	"mySQLServer" :
+	{
+		"connectionParameters" :
+		{
+			"host"            : "localhost",
+			"user"            : "root",
+			"password"        : "1234",
+			"database"        : "easy_wow_db",
+			"connectionLimit" : 10
+		}
+	}
+}

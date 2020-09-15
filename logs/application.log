@@ -1,0 +1,71 @@
+[2020-09-14T21:27:52.784] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-09-14T21:27:52.806] [DEBUG] default - Server started on port 9000.
+[2020-09-14T21:27:52.825] [ERROR] default - Error: ER_DB_DROP_EXISTS: Can't drop database 'easy_wow_db'; database doesn't exist
+    at Query.Sequence._packetToError (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (events.js:315:20)
+    at addChunk (_stream_readable.js:295:12)
+    at readableAddChunk (_stream_readable.js:271:9)
+    at Socket.Readable.push (_stream_readable.js:212:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)
+    --------------------
+    at Protocol._enqueue (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Connection.query (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\mysql\lib\Connection.js:198:25)
+    at execteQuery (C:\Users\Михаил\Downloads\easywow-master\easywow-master\utils\db_initializer.js:39:13)
+    at C:\Users\Михаил\Downloads\easywow-master\easywow-master\utils\db_initializer.js:26:24
+    at nextTask (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\async\dist\async.js:4576:27)
+    at Object.waterfall (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\async\dist\async.js:4587:9)
+    at Object.awaitable [as waterfall] (C:\Users\Михаил\Downloads\easywow-master\easywow-master\node_modules\async\dist\async.js:208:32)
+    at Object.exports.init (C:\Users\Михаил\Downloads\easywow-master\easywow-master\utils\db_initializer.js:24:8)
+    at Server.<anonymous> (C:\Users\Михаил\Downloads\easywow-master\easywow-master\server.js:50:36)
+    at Object.onceWrapper (events.js:421:28)
+    at Server.emit (events.js:315:20)
+    at emitListeningNT (net.js:1347:10)
+    at processTicksAndRejections (internal/process/task_queues.js:83:21) {
+  code: 'ER_DB_DROP_EXISTS',
+  errno: 1008,
+  sqlMessage: "Can't drop database 'easy_wow_db'; database doesn't exist",
+  sqlState: 'HY000',
+  index: 0,
+  sql: 'DROP DATABASE easy_wow_db'
+}
+[2020-09-14T21:27:52.836] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-09-14T21:27:53.311] [DEBUG] default - init done
+[2020-09-14T21:39:17.781] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-09-14T21:39:17.801] [DEBUG] default - Server started on port 9000.
+[2020-09-14T21:39:17.869] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-09-14T21:39:18.388] [DEBUG] default - init done
+[2020-09-14T21:39:53.976] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-09-14T21:39:53.995] [DEBUG] default - Server started on port 9000.
+[2020-09-14T21:39:54.054] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-09-14T21:39:54.492] [DEBUG] default - init done
+[2020-09-15T13:26:50.558] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-09-15T13:26:50.578] [DEBUG] default - Server started on port 9000.
+[2020-09-15T13:26:50.644] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-09-15T13:26:51.161] [DEBUG] default - init done
+[2020-09-15T13:27:44.175] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-09-15T13:27:44.194] [DEBUG] default - Server started on port 9000.
+[2020-09-15T13:27:44.257] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-09-15T13:27:44.685] [DEBUG] default - init done
+[2020-09-15T14:30:54.566] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-09-15T14:30:54.586] [DEBUG] default - Server started on port 9000.
+[2020-09-15T14:30:54.669] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-09-15T14:30:55.059] [DEBUG] default - init done
+[2020-09-15T15:25:09.943] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-09-15T15:25:09.972] [DEBUG] default - Server started on port 9000.
+[2020-09-15T15:25:10.096] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-09-15T15:25:10.647] [DEBUG] default - init done
+[2020-09-15T15:34:45.337] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-09-15T15:34:45.358] [DEBUG] default - Server started on port 9000.
+[2020-09-15T15:34:45.432] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-09-15T15:34:45.838] [DEBUG] default - init done
+[2020-09-15T15:37:21.600] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-09-15T15:37:21.621] [DEBUG] default - Server started on port 9000.
+[2020-09-15T15:37:21.696] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-09-15T15:37:22.122] [DEBUG] default - init done
