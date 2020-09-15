@@ -1,0 +1,22 @@
+.green-button{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #AAF53D;
+
+    font-size: 15pt;
+
+    cursor: pointer;
+}
+
+.green-button:hover{
+    text-decoration: none;
+    box-shadow: 1px 10px 10px -5px #AAAAAA;
+}
+
+.green-button:visited{
+    text-decoration: none;
+    box-shadow: 1px 10px 10px -5px #AAAAAA;
+}

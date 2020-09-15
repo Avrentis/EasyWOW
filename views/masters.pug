@@ -1,0 +1,19 @@
+extends layout
+block additional-head
+    link(href="/styles/tables.css" rel="stylesheet")
+    link(href="/styles/masters.css" rel="stylesheet")
+block content
+    div.content-offcet
+        div.content-container
+            br
+            div.table
+                - for(var i = 0; i < masters.length; i++){
+                div.row
+                    div.cell
+                        img.master_photo(src=masters[i].pathToImage)
+                    div.cell.master_description_cell
+                        label.master_name=masters[i].name
+                        br
+                        br
+                        label.master_description=masters[i].description
+                - }

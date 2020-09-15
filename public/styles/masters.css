@@ -1,0 +1,21 @@
+.master_photo{
+    width: 300px;
+}
+
+.master_description_cell{
+    text-align: left;
+    padding-right: 10px;
+}
+
+.master_name{
+    color: #454545;
+    font-size: 28pt;
+    font-weight: bold;
+    font-family: Georgia, serif;
+}
+
+.master_description{
+    color: #454545;
+    font-size: 24pt;
+    font-family: Georgia, serif;
+}

@@ -1,0 +1,70 @@
+doctype html
+html
+	head
+		meta(charset = 'utf-8')
+		link(rel="shortcut icon" type="image/x-icon" href="/images/favicon.png")
+		script(src="https://code.jquery.com/jquery-3.4.1.min.js")
+		script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js")
+		meta(name='viewport', content="initial-scale=1.0, width=device-width")
+		link(href="/styles/layout.css" rel="stylesheet")
+		link(href="/styles/buttons.css" rel="stylesheet")
+		script(src="/javascripts/layout.js")
+		- if(typeof user !== "undefined"){
+		script(src="/javascripts/sign_out.js")
+		- }
+		title EASYWOW
+		block additional-head
+	body
+		div.header-container
+			div#menu
+				a#logo-text(href="/") 
+				div.business-name
+					div.business-name-text EASYWOW
+				- if(typeof hideOrders !== "undefined"){
+					a.menu-link.menu-link-selected(href="/") На главную
+				- }else{
+					a.menu-link(href="/order") Онлайн запись Вход
+				- }
+				- if(typeof hideMasters !== "undefined"){
+					a.menu-link.menu-link-selected(href="/") На главную
+				- }else{
+					a.menu-link(href="/masters") Мастера
+				- }
+					a.menu-link(href="/#contacts") Контакты
+		div#tooltip
+		div#dialog-message
+			p#alert-text
+		- if(typeof user !== "undefined"){
+		div.submenu-container
+			a.submenu-item#account-greeting(href="/profile") Здравствуй, #{user.name}
+			div#sign-out-btn.green-button Выйти
+		- }
+		- if(typeof displayLogin !== "undefined" && typeof user == "undefined"){
+		div.submenu-container
+			label.login-label Логин:
+			input#login.login-input(type="text")
+			div#sign-in-btn.green-button Войти
+			div#open-sign-up-form-btn.green-button Регистрация
+		div.submenu-container#sign-up-container
+			label.login-label Логин*:
+			input#login-sign-up.login-input(type="text")
+			br
+			label.login-label Обращение* (Имя/Фамилия):
+			input#name.login-input(type="text")
+			br
+			label.login-label Дата рождения (Пример 1.12.1988):
+			input#birthday.login-input(type="text")
+			br
+			label.login-label Номер телефона*:
+			input#phone-number.login-input(type="text")
+			br
+			div#sign-up-btn.green-button Зарегистрировать
+		- }
+		- if(typeof user !== "undefined" && user.type === User.ADMIN_USER_TYPE_ID){
+		div.submenu-container
+			a.submenu-item(href="/order/list") Заказы
+			a.submenu-item(href="/user/list") Пользователи
+		- }
+		block additional-header
+		block content
+		//- div.footer 2020 EASYWOW &copy; Воронеж
