@@ -1,0 +1,4 @@
+﻿1. Скачать nodejs версии 12.16.2 LTS https://nodejs.org/en/
+2. Выполнить в консоли npm i
+3. Запустить сайт через run.bat
+4. Адрес https://localhost:9000/
