@@ -1,26 +1,31 @@
 extends layout
 block additional-head
-    link(href="/styles/tables.css" rel="stylesheet")
-    link(href="/styles/orders.css" rel="stylesheet")
+	link(href="/styles/tables.css" rel="stylesheet")
+	link(href="/styles/orders.css" rel="stylesheet")
+	script(src="/javascripts/orders.js")
 block content
-    div.content-offcet
-        div.content-container
-            - if (orders.length > 0){
-            div.table
-                div.header-row
-                    div.cell.header-cell
-                    div.cell.header-cell Имя Клиента
-                    div.cell.header-cell Номер
-                    div.cell.header-cell Статус
-                - for(var i = 0; i < orders.length; i++){
-                div.row
-                    div.cell=orders[i].id
-                    div.cell!=orders[i].name
-                    div.cell!=orders[i].phoneNumber
-                    div.cell!=orderUtils.getStatusTextValue(orders[i].status)
-                - }
-            - } else {
-            div.one-cell-table
-                div.one-cell-row
-                    div.singleton-cell Нет заказов
-            - }
+	div.content-offcet
+		div.content-container
+			- if (orders.length > 0){
+			div.table
+				div.header-row
+					div.cell.header-cell
+					div.cell.header-cell Имя Клиента
+					div.cell.header-cell Номер
+					div.cell.header-cell Статус
+					div.cell.header-cell Описание
+					div.cell.header-cell 
+				- for(var i = 0; i < orders.length; i++){
+				div.row
+					div.cell=orders[i].id
+					div.cell!=orders[i].name
+					div.cell!=orders[i].phoneNumber
+					div.cell!=orderUtils.getStatusTextValue(orders[i].status)
+					div.cell!=orderUtils.processDescription(orders[i].description)
+					div.cell!=orderUtils.getButtonsByOrder(orders[i])
+				- }
+			- } else {
+			div.one-cell-table
+				div.one-cell-row
+					div.singleton-cell Нет заказов
+			- }

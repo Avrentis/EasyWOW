@@ -12,14 +12,14 @@ html
 		- if(typeof user !== "undefined"){
 		script(src="/javascripts/sign_out.js")
 		- }
-		title EASYWOW
+		title Easy WOW
 		block additional-head
 	body
 		div.header-container
 			div#menu
-				a#logo-text(href="/") 
+				a#logo-text(href="/") Easy WOW
 				div.business-name
-					div.business-name-text EASYWOW
+					div.business-name-text Салон красоты
 				- if(typeof hideOrders !== "undefined"){
 					a.menu-link.menu-link-selected(href="/") На главную
 				- }else{
@@ -67,4 +67,4 @@ html
 		- }
 		block additional-header
 		block content
-		//- div.footer 2020 EASYWOW &copy; Воронеж
+		//- div.footer 2020 Easy WOW &copy; Воронеж

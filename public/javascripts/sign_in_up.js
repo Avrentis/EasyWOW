@@ -31,6 +31,7 @@ $(function(){
             },
             error: function(error) {
                 console.log(error);
+                showAlert('Система не может обработать это действие', 'Ошибка');
             }
         });
     });
@@ -76,6 +77,7 @@ $(function(){
             },
             error: function(error) {
                 console.log(error);
+                showAlert('Система не может обработать это действие', 'Ошибка');
             }
         });
     });

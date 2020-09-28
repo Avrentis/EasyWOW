@@ -7,9 +7,13 @@ $(function(){
         var name = $('#customer-name').val();
         var phoneNumber = $('#customer-contacts').val();
         var description = $('#request-text').val();
+        var master = $('#master').val();
+        var date = $('#request-date').val();
+        var time = $('#request-time').val();
 
         if (isInputValueEmpty(name, FIELDS_VALIDATION_MESSAGE) || isInputValueEmpty(description, FIELDS_VALIDATION_MESSAGE)
-            || isInputValueEmpty(phoneNumber, FIELDS_VALIDATION_MESSAGE)){
+            || isInputValueEmpty(phoneNumber, FIELDS_VALIDATION_MESSAGE) || isInputValueEmpty(date, FIELDS_VALIDATION_MESSAGE)
+            || isInputValueEmpty(time, FIELDS_VALIDATION_MESSAGE)){
             return;
         }
 
@@ -26,7 +30,10 @@ $(function(){
             data: JSON.stringify({
                 name: name,
                 description: description,
-                phoneNumber: phoneNumber
+                phoneNumber: phoneNumber,
+                master: master,
+                date: date,
+                time: time
             }),
             success: function(data){
                 var status = data.status;

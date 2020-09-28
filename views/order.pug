@@ -22,7 +22,27 @@ block content
 				div.input-container
 					input#customer-contacts.request-input(type="text" value=(typeof user != "undefined" ? user.phoneNumber : ''))
 				br
-				label.request-labels Описание (что хотите сделать?):
+				label.request-labels Мастер (необязательно):
+				br
+				div.input-container
+					select#master.request-input
+						option.request-input
+						- for(var i = 0; i < masters.length; i++){
+						option.request-input(value=masters[i].id)=masters[i].name
+						- }
+				br
+				label.request-labels Дата и время:
+				br
+				div.input-container
+					input#request-date.request-date-input(type="date")
+					select#request-time.request-date-input
+						- for(var h = 9; h < 19; h++){
+							- for(var m = 0; m < 60; m=m+15){
+								option.request-date-input(value=h+':'+(m !== 0 ? m : '00'))=h+':'+(m !== 0 ? m : '00')
+							- }
+						- }
+				br
+				label.request-labels Что хотите сделать?:
 				br
 				div.input-container
 					textarea#request-text(rows="10" cols="117")
