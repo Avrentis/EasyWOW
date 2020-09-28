@@ -20,7 +20,8 @@ router.get('/profile', function(req, res){
                 res.render('profile', {
                     hideOrders: true,
                     displayLogin: true,
-                    user: user[0]
+                    user: user[0],
+                    User: User
                 });
                 return;
             }

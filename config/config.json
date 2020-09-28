@@ -33,5 +33,6 @@
 			"database"        : "easy_wow_db",
 			"connectionLimit" : 10
 		}
-	}
+	},
+	"recreateDBOnStartup" : true
 }
