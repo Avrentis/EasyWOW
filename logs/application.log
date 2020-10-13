@@ -1154,3 +1154,12 @@
 [2020-09-28T15:52:45.843] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
 [2020-09-28T15:52:45.862] [DEBUG] default - Server started on port 9000.
 [2020-09-28T15:52:45.946] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-09-28T17:12:37.221] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-09-28T17:12:37.240] [DEBUG] default - Server started on port 9000.
+[2020-09-28T17:12:37.308] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-10-13T19:08:48.522] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-10-13T19:08:48.571] [DEBUG] default - Server started on port 9000.
+[2020-10-13T19:08:48.714] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
+[2020-10-13T19:23:25.112] [DEBUG] default - Execute query:  DROP DATABASE easy_wow_db
+[2020-10-13T19:23:25.148] [DEBUG] default - Server started on port 9000.
+[2020-10-13T19:23:25.235] [DEBUG] default - Execute query:  CREATE DATABASE IF NOT EXISTS easy_wow_db CHARACTER SET utf8 COLLATE utf8_general_ci
