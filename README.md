@@ -1,7 +1,7 @@
 # EasyWOW
 
 ## Описание
-Веб-приложение для организации записи клиентов на услуги к мастеру в салоне красоты
+Веб-приложение для организации записи клиентов на услуги к мастеру в салоне красоты - https://easy-wow.ru/
 
 ## Команда проекта
 * Avrentis - Коршунов М.С., гр.2.2, <avrentisgc@gmail.com>
@@ -19,3 +19,5 @@
 
 * [Miro](https://miro.com/app/board/o9J_kuk0apk=/)
 * [Trello](https://trello.com/b/efuikadp/тп-easywow)
+* [Веб-приложение](https://easy-wow.ru/)
+
