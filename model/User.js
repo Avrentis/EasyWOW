@@ -9,7 +9,6 @@ User.ADMIN_USER_TYPE_ID = 1;
 
 User.initModel = function (sequelize) {
     User.init({
-        login: DataTypes.STRING,
         name: DataTypes.STRING,
         type: DataTypes.INTEGER,
         birthday: DataTypes.DATE,
