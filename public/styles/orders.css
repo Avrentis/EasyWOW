@@ -1,0 +1,30 @@
+.expand-description{
+    display: inline-block;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.second-part-description{
+    display: inline;
+    text-decoration: none;
+}
+
+.change-order-status-btn{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.change-order-status-btn:hover{
+    box-shadow: 2px 10px 10px 2px #AAAAAA;
+}
+
+.status-img{
+    width: 32px;
+    height: 32px;
+}
+
+.restore-btn{
+    background-image: url(/images/orders/restore.png);
+}

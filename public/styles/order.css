@@ -51,6 +51,20 @@
 	color: #454545;
 }
 
+.request-date-input{
+	position: relative;
+	border: 2px solid #454545;
+	padding: 5px;
+	font-size: 15pt;
+	font-family: Georgia, serif;
+	left: -100px;
+}
+
+#request-date{
+	padding: 6px;
+	margin-right: 10px;
+}
+
 .request-input:focus{
 	box-shadow: 1px 10px 10px -5px #888888;
 }

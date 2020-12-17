@@ -9,10 +9,14 @@ html
 		link(href="/styles/layout.css" rel="stylesheet")
 		link(href="/styles/buttons.css" rel="stylesheet")
 		script(src="/javascripts/layout.js")
+		- if(typeof user === "undefined"){
+		script(src="/javascripts/sign_in_up.js")
+		- }
 		- if(typeof user !== "undefined"){
 		script(src="/javascripts/sign_out.js")
 		- }
 		title Easy WOW
+		script(type="text/javascript") (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(67778377, "init", {clickmap:true,trackLinks:true,accurateTrackBounce:true});
 		block additional-head
 	body
 		div.header-container
@@ -20,10 +24,13 @@ html
 				a#logo-text(href="/") Easy WOW
 				div.business-name
 					div.business-name-text Салон красоты
+				- if(typeof user == "undefined"){
+					a.menu-link#open-sign-in-form Вход
+				-}
 				- if(typeof hideOrders !== "undefined"){
 					a.menu-link.menu-link-selected(href="/") На главную
 				- }else{
-					a.menu-link(href="/order") Онлайн запись Вход
+					a.menu-link(href="/order") Онлайн запись
 				- }
 				- if(typeof hideMasters !== "undefined"){
 					a.menu-link.menu-link-selected(href="/") На главную
@@ -39,16 +46,20 @@ html
 			a.submenu-item#account-greeting(href="/profile") Здравствуй, #{user.name}
 			div#sign-out-btn.green-button Выйти
 		- }
-		- if(typeof displayLogin !== "undefined" && typeof user == "undefined"){
-		div.submenu-container
-			label.login-label Логин:
-			input#login.login-input(type="text")
-			div#sign-in-btn.green-button Войти
+		- if(typeof user == "undefined"){
+		div.submenu-container#sign-in-container.hide-on-load
+			label.login-label Номер телефона:
+			input#phone-number.login-input(type="text")
+			div#get-login-sms-code-btn.green-button Получить код в смс
 			div#open-sign-up-form-btn.green-button Регистрация
-		div.submenu-container#sign-up-container
-			label.login-label Логин*:
-			input#login-sign-up.login-input(type="text")
 			br
+			div#login-sms-timer.hide-on-load
+			br
+			br
+			label#login-sms-code-label.login-label.hide-on-load Код из смс:
+			input#login-sms-code.login-input.hide-on-load(type="text")
+			div#sign-in-btn.green-button.hide-on-load Войти
+		div.submenu-container#sign-up-container.hide-on-load
 			label.login-label Обращение* (Имя/Фамилия):
 			input#name.login-input(type="text")
 			br
@@ -56,9 +67,17 @@ html
 			input#birthday.login-input(type="text")
 			br
 			label.login-label Номер телефона*:
-			input#phone-number.login-input(type="text")
+			input#phone-number-new.login-input(type="text")
 			br
-			div#sign-up-btn.green-button Зарегистрировать
+			div#get-sign-up-sms-code-btn.green-button Получить код в смс
+			br
+			div#sign-up-sms-timer.hide-on-load
+			br
+			br
+			label#sign-up-sms-code-label.login-label.hide-on-load Код из смс:
+			input#sign-up-sms-code.login-input.hide-on-load(type="text")
+			br
+			div#sign-up-btn.green-button.hide-on-load Зарегистрировать
 		- }
 		- if(typeof user !== "undefined" && user.type === User.ADMIN_USER_TYPE_ID){
 		div.submenu-container

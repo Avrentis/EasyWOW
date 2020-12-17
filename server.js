@@ -11,7 +11,8 @@ var fs = require('fs'),
 var config = require('./utils/config_utils').getConfig();
 require('./utils/logger').init();
 var log = require('./utils/logger').getLogger(),
-	User = require('./model/User');
+	User = require('./model/User'),
+	smsUtils = require("./utils/sms_utils");
 
 var httpServer = http.createServer(function (req, res) {
 	var host = req.headers['host'];
@@ -53,6 +54,7 @@ httpsServer.listen(httpsApp.get('port'), function (req, res) {
 
 httpsApp.get('/', function(req, res){
 	try{
+		//smsUtils.registerCallback();
 		res.render('index', { user: req.session.user, User });
 	}catch(err){
 		console.log('Cannot open index page.\nError: ' + err.stack);
@@ -63,3 +65,4 @@ httpsApp.use('/', require('./controllers/user'));
 httpsApp.use('/order', require('./controllers/order'));
 httpsApp.use('/masters', require('./controllers/masters'));
 httpsApp.use('/', require('./controllers/sign_in_out_up'));
+httpsApp.use('/', require('./controllers/sms_api'));

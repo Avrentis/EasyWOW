@@ -22,9 +22,24 @@ function showAlert(text, title, callback){
 }
 
 function isInputValueEmpty(input, message){
-    if (input && input.trim() === ''){
+    if (typeof input !== 'undefined' && input.trim() === ''){
         showErrorAlert(message);
         return true;
     }
     return false;
+}
+
+function showElementAsInlineBlock(element)
+{
+    if(element != null)
+    {
+        if(element.css != null)
+        {
+            element.css('display', 'inline-block');
+        }
+        else
+        {
+            element.style['display'] = 'inline-block';
+        }
+    }
 }

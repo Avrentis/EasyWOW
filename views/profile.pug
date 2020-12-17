@@ -1,24 +1,23 @@
 extends layout
 block additional-head
-    link(href="styles/profile.css" rel="stylesheet")
-    title Easy WOW - Профиль
+	link(href="styles/profile.css" rel="stylesheet")
+	title Easy WOW - Профиль
 block content
-    div.content-offcet
-    div.content-container
-        div#profile-container-outer
-            div#profile-container
-                div.form-header Профиль:
-                br
-                br
-                label.field-labels="Логин: " + user.login
-                br
-                br
-                label.field-labels="Обращение: " + user.name
-                br
-                br
-                label.field-labels="Телефон для связи: " + user.phoneNumber
-                br
-                br
-                label.field-labels="День рождения: " + (user.birthday ? ('0' + user.birthday.getDate()).slice(-2) + '.' + ('0' + (user.birthday.getMonth() + 1)).slice(-2) + '.' + user.birthday.getFullYear()  : "")
-                br
-                br
+	div.content-offcet
+	div.content-container
+		div#profile-container-outer
+			div#profile-container
+				div.form-header Профиль:
+				br
+				br
+				label.field-labels="Обращение: " + user.name
+				br
+				br
+				label.field-labels="Телефон для связи: " + user.phoneNumber
+				br
+				br
+				label.field-labels="День рождения: " + (user.birthday ? ('0' + user.birthday.getDate()).slice(-2) + '.' + ('0' + (user.birthday.getMonth() + 1)).slice(-2) + '.' + user.birthday.getFullYear()  : "")
+				br
+				br
+				br
+				a(href="/edit-profile").green-button Редактировать

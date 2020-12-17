@@ -95,10 +95,6 @@ a:visited {
 	color: #454545;
 }
 
-#sign-up-container{
-	display: none;
-}
-
 .login-input{
 	display: inline-block;
 	width: 200px;
@@ -170,4 +166,8 @@ a:visited {
 
 .ui-dialog-title{
 	font-size: 20pt;
+}
+
+.hide-on-load{
+	display: none;
 }

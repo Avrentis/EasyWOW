@@ -1,0 +1,31 @@
+extends layout
+block additional-head
+	link(href="styles/profile.css" rel="stylesheet")
+	script(src="/javascripts/edit-profile.js")
+	script var userID = #{user.id};
+	title Easy WOW - Профиль
+block content
+	div.content-offcet
+	div.content-container
+		div#profile-container-outer
+			div#profile-container
+				div.form-header Профиль:
+				br
+				br
+				div#fields-block
+					label.field-labels="Номер телефона: " + user.phoneNumber
+					br
+					p
+					label.field-labels Обращение* (Имя/Фамилия):
+					input#name.profile-input(type="text" value=user.name)
+					p
+					label.field-labels Дата рождения (Пример 1.12.1988):
+					input#birthday.profile-input(type="text" value=(user.birthday ? ('0' + user.birthday.getDate()).slice(-2) + '.' + ('0' + (user.birthday.getMonth() + 1)).slice(-2) + '.' + user.birthday.getFullYear()  : ""))
+				p
+				p
+				div#save-btn.green-button Сохранить
+				p
+				p
+				a(href="/profile").gray-link Отменить
+				p
+				p

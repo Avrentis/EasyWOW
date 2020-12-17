@@ -13,11 +13,11 @@ exports.getByID = function(id, callback) {
     });
 };
 
-exports.getByLogin = function(login, callback) {
+exports.getByPhoneNumber = function(phoneNumber, callback) {
 
     User.findAll({
         where: {
-            login: login
+            phoneNumber: phoneNumber
         }
     })
     .then(user => {
@@ -34,10 +34,9 @@ exports.getAll = function(callback) {
         });
 };
 
-exports.create = function(login, name, birthday, phoneNumber, callback) {
+exports.create = function(name, birthday, phoneNumber, callback) {
 
     User.create({
-        login: login,
         name: name,
         type: User.SIMPLE_USER_TYPE_ID,
         birthday: birthday,
@@ -48,3 +47,16 @@ exports.create = function(login, name, birthday, phoneNumber, callback) {
         callback(user);
     });
 };
+
+exports.edit = function(id, name, birthday, callback) {
+
+    User.findOne({
+        where: {
+            id: id
+        }
+    })
+    .then(order => {
+        order.update({ name: name, birthday: birthday }).then(() => { callback() });
+    });
+};
+

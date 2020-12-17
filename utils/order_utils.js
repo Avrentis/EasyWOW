@@ -32,7 +32,6 @@ exports.updateStatus = function(id, status, callback) {
     })
     .then(order => {
         order.update({ status: status }).then(() => { callback() });
-
     });
 };
 

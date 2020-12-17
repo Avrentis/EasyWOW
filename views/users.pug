@@ -8,13 +8,11 @@ block content
             div.table
                 div.header-row
                     div.cell.header-cell
-                    div.cell.header-cell Логин
                     div.cell.header-cell Имя
                     div.cell.header-cell Номер
                 - for(var i = 0; i < users.length; i++){
                 div.row
                     div.cell=users[i].id
-                    div.cell!=users[i].login
                     div.cell!=users[i].name
                     div.cell!=users[i].phoneNumber
                 - }

@@ -27,6 +27,50 @@ router.get('/', function(req, res){
     }
 });
 
+router.get('/thanks', function(req, res){
+    try{
+        res.render('show_message_and_reload', {
+            message: "Спасибо за заказ!",
+            url: "/"
+        });
+    }catch(err){
+        log.error('Cannot open thanks page.\nError: ' + err.stack);
+        res.send('Something went wrong ...');
+    }
+});
+
+router.get('/completed', function(req, res){
+    try{
+        if(typeof req.session.user === 'undefined'){
+            res.redirect('/');
+            return;
+        }
+        res.render('show_message_and_reload', {
+            message: "Заказ завершён!",
+            url: "/order/list"
+        });
+    }catch(err){
+        log.error('Cannot open thanks page.\nError: ' + err.stack);
+        res.send('Something went wrong ...');
+    }
+});
+
+router.get('/cancelled', function(req, res){
+    try{
+        if(typeof req.session.user === 'undefined'){
+            res.redirect('/');
+            return;
+        }
+        res.render('show_message_and_reload', {
+            message: "Заказ отменён!",
+            url: "/order/list"
+        });
+    }catch(err){
+        log.error('Cannot open thanks page.\nError: ' + err.stack);
+        res.send('Something went wrong ...');
+    }
+});
+
 router.get('/list', function(req, res){
 
     try{
@@ -61,7 +105,7 @@ router.post('/', function(req, res) {
         var name = req.body.name;
         var phoneNumber = req.body.phoneNumber;
         var description = req.body.description;
-        var masterID = req.body.master;
+        var masterID = typeof req.body.master != "undefined" && masterID !== "" ? masterID : null;
         var date = req.body.date;
         var time = req.body.time;
 
@@ -101,16 +145,7 @@ router.post('/', function(req, res) {
             return;
         }
 
-        if(masterID && masterID.length > 10){
-            res.send(JSON.stringify({
-                    error: 'Некорректный формат идентификатора мастера!',
-                    status: 500
-                })
-            );
-            return;
-        }
-
-        if(masterID && !/^[\d]+$/.test(masterID)){
+        if(masterID && masterID.length > 10 && !/^[\d]+$/.test(masterID)){
             res.send(JSON.stringify({
                     error: 'Некорректный формат идентификатора мастера!',
                     status: 500

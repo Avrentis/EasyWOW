@@ -75,23 +75,20 @@ function createObjects(callback) {
 
 	sequelize.sync()
 		.then(() => User.bulkCreate([{
-			login: 'a',
 			name: 'Admin',
 			type: User.ADMIN_USER_TYPE_ID,
 			birthday: new Date(1980, 6, 20),
-			phoneNumber: '+79009009090'
+			phoneNumber: '79009009090'
 		},{
-			login: 'guest',
 			name: 'guest',
 			type: User.SIMPLE_USER_TYPE_ID,
 			birthday: new Date(1980, 6, 20),
-			phoneNumber: '+79000000000'
+			phoneNumber: '79000000000'
 		},{
-			login: 'mk',
 			name: 'Михаил Коршунов',
 			type: User.SIMPLE_USER_TYPE_ID,
 			birthday: new Date(1999, 6, 21),
-			phoneNumber: '+79515583820'
+			phoneNumber: '79515583820'
 		}]))
 		.then(() => {
 			sequelize.sync()

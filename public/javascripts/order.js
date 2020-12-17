@@ -39,12 +39,12 @@ $(function(){
                 var status = data.status;
 
                 if (status === 200){
-                    showAlert('Заявка успешно отправлена!', "Готово!");
+                    window.location = '/order/thanks';
                     $('#request-text').val('');
                 }else if(status === 500 && data.error != null){
                     showErrorAlert(data.error);
                 }else {
-                    showErrorAlert('Логин неверен');
+                    showErrorAlert('Что-то пошло не так :\'(');
                 }
             },
             error: function(error) {

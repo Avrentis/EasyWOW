@@ -5,9 +5,8 @@
     margin-bottom: 20px;
     padding: 20px;
     background-color: #AAF53D;
-
+    text-decoration: none;
     font-size: 15pt;
-
     cursor: pointer;
 }
 
@@ -19,4 +18,21 @@
 .green-button:visited{
     text-decoration: none;
     box-shadow: 1px 10px 10px -5px #AAAAAA;
+}
+
+.gray-link{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #606060;
+}
+
+.gray-link:hover{
+    text-decoration: none;
+    box-shadow: 1px 10px 10px -5px #AAAAAA;
+}
+
+.hide-on-load{
+    display: none;
 }

@@ -1,0 +1,17 @@
+extends layout
+block additional-head
+	link(href="/styles/show_message_and_reload.css" rel="stylesheet")
+	script $(function(){ setTimeout(function() {window.location = "#{url}";}, 5000); });
+	title Easy WOW
+block content
+	table#messageTable
+		tr
+			td
+				p#message #{message}
+				br
+				br
+		tr
+			td
+				br
+				br
+				a#redirection_message(href=url) Нажмите здесь, если не будете перенаправлены автоматически через 5 секунд.

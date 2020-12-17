@@ -16,7 +16,14 @@ $(function(){
             }),
             success: function(data){
                 if (data.status === 200){
-                    window.location = '/order/list';
+                    if(event.target.getAttribute('action') === 4){
+                        window.location = '/order/completed';
+                    } else if(event.target.getAttribute('action') === 5 ||
+                        event.target.getAttribute('action') === 3){
+                        window.location = '/order/cancelled';
+                    } else {
+                        window.location = '/order/list';
+                    }
                 }else if(data.status === 500 && data.error != null){
                     showAlert(data.error, 'Ошибка');
                 }else {

@@ -14,7 +14,7 @@ $(function(){
                 }else if(status === 500 && data.error != null){
                     showAlert(data.error, 'Ошибка');
                 }else {
-                    showAlert('Логин неверен', 'Ошибка');
+                    showAlert('Что-то пошло не так :\'(', 'Ошибка');
                 }
             },
             error: function(error) {
