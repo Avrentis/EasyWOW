@@ -19,5 +19,6 @@
 
 * [Miro](https://miro.com/app/board/o9J_kuk0apk=/)
 * [Trello](https://trello.com/b/efuikadp/тп-easywow)
-* [Веб-приложение](https://easy-wow.ru/)
+* [Веб-приложение/сайт](https://easy-wow.ru/)
+* [Видео](https://github.com/Avrentis/EasyWOW/tree/master/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE)
 
